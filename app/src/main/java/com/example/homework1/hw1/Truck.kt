@@ -1,13 +1,13 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
-class SportCar (
+class Truck(
     brand: String,
     model: String,
     year: Int,
     enginePower: Int,
     country: String,
-    maxSpeed: Int,
-
+    loadCapacity: Int,
+    length: Int
 ): Car(
     brand = brand,
     model = model,

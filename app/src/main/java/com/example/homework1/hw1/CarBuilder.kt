@@ -1,4 +1,4 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
 class CarBuilder(val brand: String) {
     private var model: String = ""
@@ -15,7 +15,7 @@ class CarBuilder(val brand: String) {
         this.year = year
         return this
     }
-    fun setEnginePower(enginePower: Int): CarBuilder{
+    fun setEnginePower(enginePower: Int): CarBuilder {
         this.enginePower = enginePower
         return this
     }

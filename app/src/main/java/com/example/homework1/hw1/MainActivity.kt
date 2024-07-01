@@ -1,4 +1,4 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.doOnTextChanged
+import com.example.homework1.R
 import com.example.homework1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,8 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-    private fun initViews2(){
+    private fun initViews2() {
         viewBinding?.apply {
             carsEt.doOnTextChanged { text, start, before, count ->
                 text?.let {
@@ -43,13 +43,14 @@ class MainActivity : AppCompatActivity() {
             button.setOnClickListener {
                 val countCars = Integer.parseInt(carsEt.text.toString())
                 val winner = startRacing(countCars)
-                Toast.makeText(this@MainActivity, "Winner: ${winner.brand}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Winner: ${winner.brand}", Toast.LENGTH_SHORT)
+                    .show()
 
             }
         }
     }
 
-    fun startRacing(numCars: Int) : Car {
+    fun startRacing(numCars: Int): Car {
         val cars = mutableListOf<Car>()
         repeat(numCars) {
             val car = CarBuilder("$it")
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
         return raceCars(cars)
     }
+
     override fun onDestroy() {
         super.onDestroy()
     }
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             var i = 0;
             while (i < size) {
                 if (i + 1 < roundCars.size) {
-                    val randomCar = (i + 1..< roundCars.size).random()
+                    val randomCar = (i + 1..<roundCars.size).random()
                     val winner = race(roundCars[i], roundCars[randomCar])
                     winners.add(winner)
                     println("${roundCars[i].brand} против ${roundCars[randomCar].brand} - Победитель: ${winner.brand}")
