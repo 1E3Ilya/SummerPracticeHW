@@ -6,6 +6,6 @@
     <string name="profile_screen">Profile</string>
     <string name="contacts_screen">Contacts</string>
     <string name="notifications_screen">Notifications</string>
-    <string name="settings_screen">Settings</string>
+    <string name="cities_screen">Cities</string>
 
 </resources>
