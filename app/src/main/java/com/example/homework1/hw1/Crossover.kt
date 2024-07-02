@@ -1,4 +1,4 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
 class Crossover(
     brand: String,

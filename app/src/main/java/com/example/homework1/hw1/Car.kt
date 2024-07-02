@@ -1,4 +1,4 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
 open class Car (
     val brand: String,

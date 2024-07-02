@@ -1,13 +1,13 @@
-package com.example.homework1
+package com.example.homework1.hw1
 
-class Truck(
+class MilitaryCar(
     brand: String,
     model: String,
     year: Int,
     enginePower: Int,
     country: String,
-    loadCapacity: Int,
-    length: Int
+    countOfGuns: Int,
+    armor: Boolean
 ): Car(
     brand = brand,
     model = model,
